@@ -1,0 +1,14 @@
+C:\Users\Erica\Documents\tutoriales\practicas\netCore_1\WarmUpService\WarmUpService\bin\Debug\netcoreapp2.1\WarmUpService.deps.json
+C:\Users\Erica\Documents\tutoriales\practicas\netCore_1\WarmUpService\WarmUpService\bin\Debug\netcoreapp2.1\WarmUpService.runtimeconfig.json
+C:\Users\Erica\Documents\tutoriales\practicas\netCore_1\WarmUpService\WarmUpService\bin\Debug\netcoreapp2.1\WarmUpService.runtimeconfig.dev.json
+C:\Users\Erica\Documents\tutoriales\practicas\netCore_1\WarmUpService\WarmUpService\bin\Debug\netcoreapp2.1\WarmUpService.dll
+C:\Users\Erica\Documents\tutoriales\practicas\netCore_1\WarmUpService\WarmUpService\bin\Debug\netcoreapp2.1\WarmUpService.pdb
+C:\Users\Erica\Documents\tutoriales\practicas\netCore_1\WarmUpService\WarmUpService\obj\Debug\netcoreapp2.1\WarmUpService.csprojAssemblyReference.cache
+C:\Users\Erica\Documents\tutoriales\practicas\netCore_1\WarmUpService\WarmUpService\obj\Debug\netcoreapp2.1\WarmUpService.csproj.CoreCompileInputs.cache
+C:\Users\Erica\Documents\tutoriales\practicas\netCore_1\WarmUpService\WarmUpService\obj\Debug\netcoreapp2.1\WarmUpService.RazorAssemblyInfo.cache
+C:\Users\Erica\Documents\tutoriales\practicas\netCore_1\WarmUpService\WarmUpService\obj\Debug\netcoreapp2.1\WarmUpService.RazorAssemblyInfo.cs
+C:\Users\Erica\Documents\tutoriales\practicas\netCore_1\WarmUpService\WarmUpService\obj\Debug\netcoreapp2.1\WarmUpService.AssemblyInfoInputs.cache
+C:\Users\Erica\Documents\tutoriales\practicas\netCore_1\WarmUpService\WarmUpService\obj\Debug\netcoreapp2.1\WarmUpService.AssemblyInfo.cs
+C:\Users\Erica\Documents\tutoriales\practicas\netCore_1\WarmUpService\WarmUpService\obj\Debug\netcoreapp2.1\WarmUpService.RazorTargetAssemblyInfo.cache
+C:\Users\Erica\Documents\tutoriales\practicas\netCore_1\WarmUpService\WarmUpService\obj\Debug\netcoreapp2.1\WarmUpService.dll
+C:\Users\Erica\Documents\tutoriales\practicas\netCore_1\WarmUpService\WarmUpService\obj\Debug\netcoreapp2.1\WarmUpService.pdb
