@@ -10,7 +10,7 @@ namespace WarmUpService.Mapper
     {
         public MappingsProfile()
         {
-            CreateMap<Post, PostDTO>();
+            CreateMap<Post, GetPostDTO>();
         }
     }
 }

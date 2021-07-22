@@ -22,34 +22,33 @@ namespace WarmUpService.Controllers
 
         private readonly IMapper _mapper;
 
-      
+
         public PostController(WarmUpContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
-    }
+        }
 
         // GET: api/Post
+        [Route("GetAll")]
         [HttpGet]
-        public IEnumerable<PostDTO> GetPosts()
+        public IEnumerable<GetPostDTO> GetPosts()
         {
-            //automapper
-          
-           
             ICollection<Post> posts = _context.Posts.OrderByDescending(x => x.FechaCreacion).ToList();
-            List<PostDTO> postsDTO = new List<PostDTO>();
+            List<GetPostDTO> postsDTO = new List<GetPostDTO>();
             foreach (Post post in posts)
             {
-                PostDTO objGetPosts = _mapper.Map<PostDTO>(post);
+                GetPostDTO objGetPosts = _mapper.Map<GetPostDTO>(post);
                 postsDTO.Add(objGetPosts);
             }
             return postsDTO;
         }
 
 
-      /*  Deberá buscar un post.Si existe, devolver sus detalles, caso contrario devolver un mensaje
-de error con el código de estado HTTP que corresponda.*/
+        /*  Deberá buscar un post.Si existe, devolver sus detalles, caso contrario devolver un mensaje
+  de error con el código de estado HTTP que corresponda.*/
         // GET: api/Post/5
+        [Route("GetDetail")]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPost([FromRoute] int id)
         {

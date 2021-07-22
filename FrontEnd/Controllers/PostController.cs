@@ -16,17 +16,13 @@ namespace FrontEnd.Controllers
             IEnumerable<GetPosts> posts = null;
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:44307/api");
-                var responseTask = client.GetAsync("GetPosts");
-                responseTask.Wait();
-                var result = responseTask.Result;
+               
+                var result = client.GetAsync("https://localhost:44307/api/Post/GetAll").Result;
 
                 if (result.IsSuccessStatusCode)
                 {
-                    var readTask = result.Content.ReadAsAsync<IList<GetPosts>>();
-                    readTask.Wait();
-
-                    posts = readTask.Result;
+                    posts = result.Content.ReadAsAsync<List<GetPosts>>().Result;
+                    
                 }
                 else
                 {
