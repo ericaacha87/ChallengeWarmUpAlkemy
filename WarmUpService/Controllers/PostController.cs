@@ -14,7 +14,7 @@ using System.Net;
 
 namespace WarmUpService.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class PostController : ControllerBase
     {
@@ -30,9 +30,9 @@ namespace WarmUpService.Controllers
         }
 
         // GET: api/Post
-        [Route("GetAll")]
+      
         [HttpGet]
-        public IEnumerable<GetPostDTO> GetPosts()
+        public IEnumerable<GetPostDTO> GetAll()
         {
             ICollection<Post> posts = _context.Posts.OrderByDescending(x => x.FechaCreacion).ToList();
             List<GetPostDTO> postsDTO = new List<GetPostDTO>();
@@ -48,9 +48,9 @@ namespace WarmUpService.Controllers
         /*  Deberá buscar un post.Si existe, devolver sus detalles, caso contrario devolver un mensaje
   de error con el código de estado HTTP que corresponda.*/
         // GET: api/Post/5
-        [Route("GetDetail")]
+   
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetPost([FromRoute] int id)
+        public async Task<IActionResult> GetDetail([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {
