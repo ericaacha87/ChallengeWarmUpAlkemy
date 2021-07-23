@@ -104,17 +104,18 @@ namespace WarmUpService.Controllers
 
         // POST: api/Post
         [HttpPost]
-        public async Task<IActionResult> PostPost([FromBody] Post post)
+        public async Task<IActionResult> Create([FromBody] CreatePost createPost)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
+            Post post = _mapper.Map<Post>(createPost);
             _context.Posts.Add(post);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetPost", new { id = post.Id }, post);
+           // return CreatedAtAction("GetPost", new { id = post.Id }, post);
+            return Ok();
         }
 
         // DELETE: api/Post/5

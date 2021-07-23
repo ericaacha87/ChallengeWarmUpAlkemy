@@ -11,6 +11,8 @@ namespace WarmUpService.Mapper
         public MappingsProfile()
         {
             CreateMap<Post, GetAllDTO>();
+            CreateMap<CreatePost, Post>();
+
         }
     }
 }

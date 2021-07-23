@@ -1,4 +1,4 @@
-﻿@model IEnumerable<FrontEnd.Models.GetPosts>
+﻿@model IEnumerable<FrontEnd.Models.GetAll>
 
 @{
     ViewBag.Title = "Index";
@@ -8,6 +8,9 @@
 
 
 <table class="table">
+    <tr>
+        @Html.ActionLink("Crear", "Create")
+    </tr>
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Titulo)
