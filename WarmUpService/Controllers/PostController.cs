@@ -50,7 +50,7 @@ namespace WarmUpService.Controllers
         // GET: api/Post/5
    
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetDetail([FromRoute] int id)
+        public async Task<IActionResult> GetDetails([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {

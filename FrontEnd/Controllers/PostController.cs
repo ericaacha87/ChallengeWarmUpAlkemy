@@ -13,7 +13,7 @@ namespace FrontEnd.Controllers
         public ActionResult Index()
         {
             // call api and get all posts
-            IEnumerable<GetPosts> posts = null;
+            IEnumerable<GetAll> posts = null;
             using (var client = new HttpClient())
             {
                
@@ -21,12 +21,12 @@ namespace FrontEnd.Controllers
 
                 if (result.IsSuccessStatusCode)
                 {
-                    posts = result.Content.ReadAsAsync<List<GetPosts>>().Result;
+                    posts = result.Content.ReadAsAsync<List<GetAll>>().Result;
                     
                 }
                 else
                 {
-                    posts = Enumerable.Empty<GetPosts>();
+                    posts = Enumerable.Empty<GetAll>();
                     ModelState.AddModelError(string.Empty, "Try Later.");
                 }
             }
@@ -36,7 +36,22 @@ namespace FrontEnd.Controllers
         // GET: Post/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            GetDetails objGetDetails = null;
+            using (var client = new HttpClient())
+            {
+                var result = client.GetAsync("https://localhost:44307/api/Post/GetDetails/"+ id).Result;
+
+                if (result.IsSuccessStatusCode)
+                {
+                    objGetDetails = result.Content.ReadAsAsync<GetDetails>().Result;
+                }
+                else
+                {
+                   
+                    ModelState.AddModelError(string.Empty, "Try Later.");
+                }
+            }
+                return View(objGetDetails);
         }
 
         // GET: Post/Create
