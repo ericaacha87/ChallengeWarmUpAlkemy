@@ -32,13 +32,13 @@ namespace WarmUpService.Controllers
         // GET: api/Post
       
         [HttpGet]
-        public IEnumerable<GetPostDTO> GetAll()
+        public IEnumerable<GetAllDTO> GetAll()
         {
             ICollection<Post> posts = _context.Posts.OrderByDescending(x => x.FechaCreacion).ToList();
-            List<GetPostDTO> postsDTO = new List<GetPostDTO>();
+            List<GetAllDTO> postsDTO = new List<GetAllDTO>();
             foreach (Post post in posts)
             {
-                GetPostDTO objGetPosts = _mapper.Map<GetPostDTO>(post);
+                GetAllDTO objGetPosts = _mapper.Map<GetAllDTO>(post);
                 postsDTO.Add(objGetPosts);
             }
             return postsDTO;
